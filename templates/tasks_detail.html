@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+{% block title %}Volga SchoolCTF 2014 - {{ task.category.title }} {{ task.score }}{% endblock %}
+{% block main_content %}
+    <h2>{{ task.name }}</h2>
+    <p>
+    {% autoescape off %}
+        {{ task.text }}
+        {{ task.gen_file_link }}
+    {% endautoescape %}
+    </p>
+    {%  if is_solved %}
+        <div class="alert alert-success">
+            Задание решено
+        </div>
+    {% else %}
+        <form role="form" id="flag_form" target="{% url 'scoreboard.views.task_solve' task.pk %}">
+            <div class="form-group">
+                <label for="flag">Флаг</label>
+                <input type="text" class="form-control" id="flag" placeholder="Введите ваш флаг">
+            </div>
+            <button type="submit" id="flag_submit" class="btn btn-primary">Проверить</button>
+        </form>
+    {% endif %}
+{% endblock %}

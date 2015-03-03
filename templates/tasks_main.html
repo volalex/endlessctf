@@ -1,0 +1,35 @@
+{% extends "main.html" %}
+{% block title %}Volga SchoolCTF 2014 - Задания{% endblock %}
+{% block main_content%}
+    <h2>Задания</h2>
+    <div class="table-responsive">
+        <table class="table">
+            <tbody>
+                {% for category,task_list in tasks.items %}
+                    <tr>
+                        <th>
+                            <h4>{{ category.title }}</h4>
+                        </th>
+                            {% for task_tuple in task_list %}
+                                <td>
+                                    {% if task_tuple.is_enabled %}
+                                        {% if task_tuple.is_solved %}
+                                            <a class="btn btn-success disabled" href="#">
+                                                {{ category.title }} {{ task_tuple.score }}
+                                            </a>
+                                        {% else %}
+                                            <a class="btn btn-primary" href="{% url 'scoreboard.views.task_detail' task_tuple.pk %}">
+                                                {{ category.title }} {{ task_tuple.score }}
+                                            </a>
+                                        {% endif %}
+                                    {% else %}
+                                        <a href="#" class="btn btn-primary disabled">{{ category.title }} {{ task_tuple.score }}</a>
+                                    {% endif %}
+                                </td>
+                            {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

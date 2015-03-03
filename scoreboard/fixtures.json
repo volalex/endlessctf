@@ -1,0 +1,757 @@
+[
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "model": "logentry",
+      "name": "log entry",
+      "app_label": "admin"
+    },
+    "pk": 1
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "model": "permission",
+      "name": "permission",
+      "app_label": "auth"
+    },
+    "pk": 2
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "model": "group",
+      "name": "group",
+      "app_label": "auth"
+    },
+    "pk": 3
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "model": "contenttype",
+      "name": "content type",
+      "app_label": "contenttypes"
+    },
+    "pk": 4
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "model": "session",
+      "name": "session",
+      "app_label": "sessions"
+    },
+    "pk": 5
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "model": "site",
+      "name": "site",
+      "app_label": "sites"
+    },
+    "pk": 6
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "model": "flatpage",
+      "name": "flat page",
+      "app_label": "flatpages"
+    },
+    "pk": 7
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "model": "attachment",
+      "name": "attachment",
+      "app_label": "django_summernote"
+    },
+    "pk": 8
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "model": "team",
+      "name": "team",
+      "app_label": "scoreboard"
+    },
+    "pk": 9
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "model": "category",
+      "name": "category",
+      "app_label": "scoreboard"
+    },
+    "pk": 10
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "model": "news",
+      "name": "news",
+      "app_label": "scoreboard"
+    },
+    "pk": 11
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "model": "task",
+      "name": "task",
+      "app_label": "scoreboard"
+    },
+    "pk": 12
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "fields": {
+      "model": "solvedtasks",
+      "name": "solved tasks",
+      "app_label": "scoreboard"
+    },
+    "pk": 13
+  },
+  {
+    "model": "sessions.session",
+    "fields": {
+      "session_data": "MTQzNzNlNjkwODAxZTYxY2NiNDQ4ZTFhM2VjN2YzZjJjZDMyYmIzMTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6MSwiX2F1dGhfdXNlcl9oYXNoIjoiMWU4NzM3MDAwYTk0MDAzOTU0YWQ3YTVhMmViNjk3ZmU1NTE4ZGRjYSJ9",
+      "expire_date": "2014-11-24T09:05:16.094Z"
+    },
+    "pk": "y414v8xe5xm4alof02kqvuwz7jfqzdn0"
+  },
+  {
+    "model": "sites.site",
+    "fields": {
+      "name": "example.com",
+      "domain": "example.com"
+    },
+    "pk": 1
+  },
+  {
+    "model": "scoreboard.team",
+    "fields": {
+      "team_name": "admin",
+      "password": "pbkdf2_sha256$12000$oTmUW2VveMJb$5h5z0+2ULSszJjRyF1XRy1xqmpgblS7AE3SnWYIYgyQ=",
+      "is_active": true,
+      "is_admin": true,
+      "last_login": "2014-11-10T09:05:15.915Z"
+    },
+    "pk": 1
+  },
+  {
+    "model": "scoreboard.team",
+    "fields": {
+      "team_name": "Team 1",
+      "password": "pbkdf2_sha256$12000$ilajDuHcyYRB$NghZHDZXlPjCYCcqPsYsakXfA9j/dMfC9S50ZwJ6zzk=",
+      "is_active": true,
+      "is_admin": false,
+      "last_login": "2014-11-10T10:35:24.807Z"
+    },
+    "pk": 2
+  },
+  {
+    "model": "scoreboard.team",
+    "fields": {
+      "team_name": "Team 2",
+      "password": "pbkdf2_sha256$12000$Sc1vDLF4Us3W$5W6gg2iiRvvNSlAsXIuorMmHQYxM/Ij7tWzUcHVTcEE=",
+      "is_active": true,
+      "is_admin": false,
+      "last_login": "2014-11-10T10:35:46.201Z"
+    },
+    "pk": 3
+  },
+  {
+    "model": "scoreboard.category",
+    "fields": {
+      "title": "Crypto",
+      "position": 1
+    },
+    "pk": 1
+  },
+  {
+    "model": "scoreboard.category",
+    "fields": {
+      "title": "Stego",
+      "position": 2
+    },
+    "pk": 2
+  },
+  {
+    "model": "scoreboard.task",
+    "fields": {
+      "text": "<p>efefefefefef<br></p>",
+      "category": 1,
+      "flag": "123",
+      "name": "Test task",
+      "score": 100,
+      "is_enabled": true,
+      "task_file": ""
+    },
+    "pk": 1
+  },
+  {
+    "model": "scoreboard.task",
+    "fields": {
+      "text": "<p>vdvdvdvdvsdvsdvsdvsdvsdvsdvsdvsdvsddv<br></p>",
+      "category": 2,
+      "flag": "Test",
+      "name": "Test task 2",
+      "score": 100,
+      "is_enabled": true,
+      "task_file": ""
+    },
+    "pk": 2
+  },
+  {
+    "model": "scoreboard.task",
+    "fields": {
+      "text": "<p>dfdfdfdf<br></p>",
+      "category": 1,
+      "flag": "lala",
+      "name": "Test task 3",
+      "score": 200,
+      "is_enabled": true,
+      "task_file": ""
+    },
+    "pk": 3
+  },
+  {
+    "model": "scoreboard.solvedtasks",
+    "fields": {
+      "team": 2,
+      "task": 2,
+      "solved_at": "2014-11-10T10:37:49.975Z"
+    },
+    "pk": 1
+  },
+  {
+    "model": "scoreboard.solvedtasks",
+    "fields": {
+      "team": 3,
+      "task": 3,
+      "solved_at": "2014-11-10T10:38:00.511Z"
+    },
+    "pk": 2
+  },
+  {
+    "model": "scoreboard.solvedtasks",
+    "fields": {
+      "team": 2,
+      "task": 3,
+      "solved_at": "2014-11-10T10:38:06.985Z"
+    },
+    "pk": 3
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add log entry",
+      "codename": "add_logentry",
+      "content_type": 1
+    },
+    "pk": 1
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change log entry",
+      "codename": "change_logentry",
+      "content_type": 1
+    },
+    "pk": 2
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete log entry",
+      "codename": "delete_logentry",
+      "content_type": 1
+    },
+    "pk": 3
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add permission",
+      "codename": "add_permission",
+      "content_type": 2
+    },
+    "pk": 4
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change permission",
+      "codename": "change_permission",
+      "content_type": 2
+    },
+    "pk": 5
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete permission",
+      "codename": "delete_permission",
+      "content_type": 2
+    },
+    "pk": 6
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add group",
+      "codename": "add_group",
+      "content_type": 3
+    },
+    "pk": 7
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change group",
+      "codename": "change_group",
+      "content_type": 3
+    },
+    "pk": 8
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete group",
+      "codename": "delete_group",
+      "content_type": 3
+    },
+    "pk": 9
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add content type",
+      "codename": "add_contenttype",
+      "content_type": 4
+    },
+    "pk": 10
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change content type",
+      "codename": "change_contenttype",
+      "content_type": 4
+    },
+    "pk": 11
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete content type",
+      "codename": "delete_contenttype",
+      "content_type": 4
+    },
+    "pk": 12
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add session",
+      "codename": "add_session",
+      "content_type": 5
+    },
+    "pk": 13
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change session",
+      "codename": "change_session",
+      "content_type": 5
+    },
+    "pk": 14
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete session",
+      "codename": "delete_session",
+      "content_type": 5
+    },
+    "pk": 15
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add site",
+      "codename": "add_site",
+      "content_type": 6
+    },
+    "pk": 16
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change site",
+      "codename": "change_site",
+      "content_type": 6
+    },
+    "pk": 17
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete site",
+      "codename": "delete_site",
+      "content_type": 6
+    },
+    "pk": 18
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add flat page",
+      "codename": "add_flatpage",
+      "content_type": 7
+    },
+    "pk": 19
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change flat page",
+      "codename": "change_flatpage",
+      "content_type": 7
+    },
+    "pk": 20
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete flat page",
+      "codename": "delete_flatpage",
+      "content_type": 7
+    },
+    "pk": 21
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add attachment",
+      "codename": "add_attachment",
+      "content_type": 8
+    },
+    "pk": 22
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change attachment",
+      "codename": "change_attachment",
+      "content_type": 8
+    },
+    "pk": 23
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete attachment",
+      "codename": "delete_attachment",
+      "content_type": 8
+    },
+    "pk": 24
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add team",
+      "codename": "add_team",
+      "content_type": 9
+    },
+    "pk": 25
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change team",
+      "codename": "change_team",
+      "content_type": 9
+    },
+    "pk": 26
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete team",
+      "codename": "delete_team",
+      "content_type": 9
+    },
+    "pk": 27
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add category",
+      "codename": "add_category",
+      "content_type": 10
+    },
+    "pk": 28
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change category",
+      "codename": "change_category",
+      "content_type": 10
+    },
+    "pk": 29
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete category",
+      "codename": "delete_category",
+      "content_type": 10
+    },
+    "pk": 30
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add news",
+      "codename": "add_news",
+      "content_type": 11
+    },
+    "pk": 31
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change news",
+      "codename": "change_news",
+      "content_type": 11
+    },
+    "pk": 32
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete news",
+      "codename": "delete_news",
+      "content_type": 11
+    },
+    "pk": 33
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add task",
+      "codename": "add_task",
+      "content_type": 12
+    },
+    "pk": 34
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change task",
+      "codename": "change_task",
+      "content_type": 12
+    },
+    "pk": 35
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete task",
+      "codename": "delete_task",
+      "content_type": 12
+    },
+    "pk": 36
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can add solved tasks",
+      "codename": "add_solvedtasks",
+      "content_type": 13
+    },
+    "pk": 37
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can change solved tasks",
+      "codename": "change_solvedtasks",
+      "content_type": 13
+    },
+    "pk": 38
+  },
+  {
+    "model": "auth.permission",
+    "fields": {
+      "name": "Can delete solved tasks",
+      "codename": "delete_solvedtasks",
+      "content_type": 13
+    },
+    "pk": 39
+  },
+  {
+    "model": "admin.logentry",
+    "fields": {
+      "user": 1,
+      "object_repr": "Team 1",
+      "object_id": "2",
+      "content_type": 9,
+      "change_message": "",
+      "action_time": "2014-11-10T10:35:24.840Z",
+      "action_flag": 1
+    },
+    "pk": 1
+  },
+  {
+    "model": "admin.logentry",
+    "fields": {
+      "user": 1,
+      "object_repr": "Team 1",
+      "object_id": "2",
+      "content_type": 9,
+      "change_message": "\u0418\u0437\u043c\u0435\u043d\u0435\u043d is_active.",
+      "action_time": "2014-11-10T10:35:33.544Z",
+      "action_flag": 2
+    },
+    "pk": 2
+  },
+  {
+    "model": "admin.logentry",
+    "fields": {
+      "user": 1,
+      "object_repr": "Team 2",
+      "object_id": "3",
+      "content_type": 9,
+      "change_message": "",
+      "action_time": "2014-11-10T10:35:46.236Z",
+      "action_flag": 1
+    },
+    "pk": 3
+  },
+  {
+    "model": "admin.logentry",
+    "fields": {
+      "user": 1,
+      "object_repr": "Team 2",
+      "object_id": "3",
+      "content_type": 9,
+      "change_message": "\u0418\u0437\u043c\u0435\u043d\u0435\u043d is_active.",
+      "action_time": "2014-11-10T10:35:51.164Z",
+      "action_flag": 2
+    },
+    "pk": 4
+  },
+  {
+    "model": "admin.logentry",
+    "fields": {
+      "user": 1,
+      "object_repr": "Crypto",
+      "object_id": "1",
+      "content_type": 10,
+      "change_message": "",
+      "action_time": "2014-11-10T10:36:06.303Z",
+      "action_flag": 1
+    },
+    "pk": 5
+  },
+  {
+    "model": "admin.logentry",
+    "fields": {
+      "user": 1,
+      "object_repr": "Stego",
+      "object_id": "2",
+      "content_type": 10,
+      "change_message": "",
+      "action_time": "2014-11-10T10:36:16.470Z",
+      "action_flag": 1
+    },
+    "pk": 6
+  },
+  {
+    "model": "admin.logentry",
+    "fields": {
+      "user": 1,
+      "object_repr": "Test task",
+      "object_id": "1",
+      "content_type": 12,
+      "change_message": "",
+      "action_time": "2014-11-10T10:36:44.144Z",
+      "action_flag": 1
+    },
+    "pk": 7
+  },
+  {
+    "model": "admin.logentry",
+    "fields": {
+      "user": 1,
+      "object_repr": "Test task 2",
+      "object_id": "2",
+      "content_type": 12,
+      "change_message": "",
+      "action_time": "2014-11-10T10:37:12.081Z",
+      "action_flag": 1
+    },
+    "pk": 8
+  },
+  {
+    "model": "admin.logentry",
+    "fields": {
+      "user": 1,
+      "object_repr": "Test task 3",
+      "object_id": "3",
+      "content_type": 12,
+      "change_message": "",
+      "action_time": "2014-11-10T10:37:39.175Z",
+      "action_flag": 1
+    },
+    "pk": 9
+  },
+  {
+    "model": "admin.logentry",
+    "fields": {
+      "user": 1,
+      "object_repr": "SolvedTasks object",
+      "object_id": "1",
+      "content_type": 13,
+      "change_message": "",
+      "action_time": "2014-11-10T10:37:49.976Z",
+      "action_flag": 1
+    },
+    "pk": 10
+  },
+  {
+    "model": "admin.logentry",
+    "fields": {
+      "user": 1,
+      "object_repr": "SolvedTasks object",
+      "object_id": "2",
+      "content_type": 13,
+      "change_message": "",
+      "action_time": "2014-11-10T10:38:00.512Z",
+      "action_flag": 1
+    },
+    "pk": 11
+  },
+  {
+    "model": "admin.logentry",
+    "fields": {
+      "user": 1,
+      "object_repr": "SolvedTasks object",
+      "object_id": "3",
+      "content_type": 13,
+      "change_message": "",
+      "action_time": "2014-11-10T10:38:06.985Z",
+      "action_flag": 1
+    },
+    "pk": 12
+  }
+]

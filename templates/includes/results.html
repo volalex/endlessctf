@@ -1,0 +1,27 @@
+<h2>Scoreboard</h2>
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>
+                    Команда
+                </td>
+                <td>
+                    Баллы
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for team_name, score in results %}
+            <tr>
+                <td>
+                    {{ team_name }}
+                </td>
+                <td>
+                    {{ score }}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,20 @@
+<h2>Новости</h2>
+<div class="list-group">
+{% for article in news_list%}
+        {% if article.pk == active_pk %}
+            <a class="list-group-item active">
+                <h5>{{ article }}</h5>
+                <div class="label-info">
+                    {{ article.create_date | date:"D d M Y - H:i" }}
+                </div>
+            </a>
+        {% else %}
+            <a class="list-group-item" href="{% url 'scoreboard.views.detail_news' article.pk %}">
+                <h5>{{ article }}</h5>
+                <span class="label label-info">
+                    {{ article.create_date | date:"D d M Y - H:i" }}
+                </span>
+            </a>
+        {% endif %}
+{% endfor %}
+</div>
