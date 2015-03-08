@@ -1,3 +1,4 @@
+# encoding: UTF-8
 from django import forms
 from scoreboard.models import Team
 

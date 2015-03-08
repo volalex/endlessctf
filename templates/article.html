@@ -1,9 +1,9 @@
 {% extends "main.html" %}
-{% block title %}Новости Volga SchoolCTF 2014 - {{ article.title }}{% endblock %}
+{% block title %}Новости CTF Forever - {{ article.title }}{% endblock %}
 
 {% block main_content %}
-    <h2>{{ article.title }}</h2>
-    <div>
+    <h2 class="terminal">{{ article.title }}</h2>
+    <div class="terminal1">
     {% autoescape off %}
         {{ article.text }}
     {% endautoescape %}

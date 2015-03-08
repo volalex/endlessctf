@@ -1,14 +1,14 @@
 {% extends "main.html" %}
-{% block title %}Volga SchoolCTF 2014 - Задания{% endblock %}
+{% block title %}CTF Forever - Задания{% endblock %}
 {% block main_content%}
-    <h2>Задания</h2>
+    <h2 class="terminal">Задания</h2>
     <div class="table-responsive">
         <table class="table">
             <tbody>
                 {% for category,task_list in tasks.items %}
                     <tr>
                         <th>
-                            <h4>{{ category.title }}</h4>
+                            <h4 class="terminal2">{{ category.title }}</h4>
                         </th>
                             {% for task_tuple in task_list %}
                                 <td>
