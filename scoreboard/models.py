@@ -27,28 +27,54 @@ class TeamUserManager(BaseUserManager):
         return user
 
 
-class Team(AbstractBaseUser):
-    team_name = models.CharField(
-        max_length=255,
-        unique=True,
-        verbose_name="Название команды"
+class Player(AbstractBaseUser):
+    #required fields
+    email = models.EmailField(unique=True,name="Адрес электронной почты")
+    username = models.CharField(max_length=100,unique=True,name="Логин")
+    USERNAME_FIELD = 'username'
+
+    SSU = "SSU"
+    SSAU = "SSAU"
+    SSTU = "SSTU"
+    PSUTI = "PSUTI"
+    PGSGA = "PGSGA"
+    IMI = "IMI"
+    NAY = "NAY"
+    SGASU = "SGASU"
+    SGUPS = "SGUPS"
+    SSEU = "SSEU"
+
+    UNI_CHOICES = (
+        (NAY,"Академия Наяновой"),
+        (IMI,"МИР"),
+        (PSUTI,"ПГУТИ"),
+        (PGSGA,"ПГСГА"),
+        (SSU,"СамГУ"),
+        (SSAU,"СГАУ"),
+        (SSTU,"СамГТУ"),
+        (SGASU,"СГАСУ"),
+        (SGUPS,"СамГУПС"),
+        (SSEU,"СГЭУ")
     )
+
+    university = models.CharField()
+
+
+
     is_active = models.BooleanField(default=False)
     is_admin = models.BooleanField(default=False)
     objects = TeamUserManager()
 
-    USERNAME_FIELD = 'team_name'
-
     def get_full_name(self):
         # The user is identified by their team name
-        return self.team_name
+        return self.username
 
     def get_short_name(self):
         # The user is identified by their team name
-        return self.team_name
+        return self.username
 
     def __str__(self):
-        return self.team_name
+        return self.username
 
     def has_perm(self, perm, obj=None):
         """Does the user have a specific permission?"""
