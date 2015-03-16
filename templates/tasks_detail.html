@@ -1,13 +1,13 @@
 {% extends "main.html" %}
-{% block title %}Volga SchoolCTF 2014 - {{ task.category.title }} {{ task.score }}{% endblock %}
+{% block title %}CTF Forever {{ task.category.title }} {{ task.score }}{% endblock %}
 {% block main_content %}
-    <h2>{{ task.name }}</h2>
-    <p>
+    <h2 class="terminal">{{ task.name }}</h2>
+    <div class="terminal1">
     {% autoescape off %}
         {{ task.text }}
         {{ task.gen_file_link }}
     {% endautoescape %}
-    </p>
+    </div>
     {%  if is_solved %}
         <div class="alert alert-success">
             Задание решено

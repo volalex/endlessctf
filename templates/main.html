@@ -8,16 +8,18 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/toaster.min.css">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/terminal.css">
     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/toaster.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/main.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="/">Volga SchoolCTF 2014</a>
+          <a class="navbar-brand terminal" href="/">CTF Forever</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -26,9 +28,6 @@
               </li>
                <li>
                   <a href="/rules/" class="navbar-link">Правила соревнований</a>
-              </li>
-               <li>
-                  <a href="/sponsor/" class="navbar-link">Спонсор соревнований</a>
               </li>
           </ul>
             {% if not user.is_authenticated %}

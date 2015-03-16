@@ -1,9 +1,9 @@
 {% extends "main.html" %}
-{% block title %}Volga SchoolCTF 2014 - {{ flatpage.title }}{% endblock %}
+{% block title %}CTF Forever {{ flatpage.title }}{% endblock %}
 
 {% block main_content %}
-    <h2>{{ flatpage.title }}</h2>
-    <div>
+    <h2 class="terminal">{{ flatpage.title }}</h2>
+    <div class="terminal1">
     {% autoescape off %}
         {{ flatpage.content }}
     {% endautoescape %}
