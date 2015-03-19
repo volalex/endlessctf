@@ -1,97 +1,9 @@
 # encoding: UTF-8
 import os
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.contrib.auth.models import User
 from django.db import models
 from django.db.models.signals import pre_delete, pre_save
 from django.dispatch import receiver
-
-
-class TeamUserManager(BaseUserManager):
-    def create_user(self, team_name, password=None):
-
-        user = self.model(
-            team_name=team_name,
-        )
-
-        user.set_password(password)
-        user.save(using=self._db)
-        return user
-
-    def create_superuser(self, team_name, password):
-        user = self.create_user(
-            password=password,
-            team_name=team_name
-        )
-        user.is_admin = True
-        user.is_active = True
-        user.save(using=self._db)
-        return user
-
-
-class Player(AbstractBaseUser):
-    #required fields
-    email = models.EmailField(unique=True,name="Адрес электронной почты")
-    username = models.CharField(max_length=100,unique=True,name="Логин")
-    USERNAME_FIELD = 'username'
-
-    SSU = "SSU"
-    SSAU = "SSAU"
-    SSTU = "SSTU"
-    PSUTI = "PSUTI"
-    PGSGA = "PGSGA"
-    IMI = "IMI"
-    NAY = "NAY"
-    SGASU = "SGASU"
-    SGUPS = "SGUPS"
-    SSEU = "SSEU"
-
-    UNI_CHOICES = (
-        (NAY,"Академия Наяновой"),
-        (IMI,"МИР"),
-        (PSUTI,"ПГУТИ"),
-        (PGSGA,"ПГСГА"),
-        (SSU,"СамГУ"),
-        (SSAU,"СГАУ"),
-        (SSTU,"СамГТУ"),
-        (SGASU,"СГАСУ"),
-        (SGUPS,"СамГУПС"),
-        (SSEU,"СГЭУ")
-    )
-
-    university = models.CharField()
-
-
-
-    is_active = models.BooleanField(default=False)
-    is_admin = models.BooleanField(default=False)
-    objects = TeamUserManager()
-
-    def get_full_name(self):
-        # The user is identified by their team name
-        return self.username
-
-    def get_short_name(self):
-        # The user is identified by their team name
-        return self.username
-
-    def __str__(self):
-        return self.username
-
-    def has_perm(self, perm, obj=None):
-        """Does the user have a specific permission?"""
-        # Simplest possible answer: Yes, always
-        return True
-
-    def has_module_perms(self, app_label):
-        """Does the user have permissions to view the app `app_label`?"""
-        # Simplest possible answer: Yes, always
-        return True
-
-    @property
-    def is_staff(self):
-        """Is the user a member of staff?"""
-        # Simplest possible answer: All admins are staff
-        return self.is_admin
 
 
 class Category(models.Model):
@@ -174,7 +86,7 @@ def auto_delete_file_on_change(sender, instance, **kwargs):
 
 class SolvedTasks(models.Model):
     task = models.ForeignKey(Task)
-    team = models.ForeignKey(Team)
+    team = models.ForeignKey(User)
     solved_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:

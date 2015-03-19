@@ -43,7 +43,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.flatpages',
+    'registration',
     'django_summernote',
+    'bootstrap3',
     'scoreboard',
 )
 
@@ -62,6 +64,8 @@ ROOT_URLCONF = 'schoolctf.urls'
 SITE_ID = 1
 
 WSGI_APPLICATION = 'schoolctf.wsgi.application'
+
+
 
 
 # Database
@@ -87,7 +91,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-AUTH_USER_MODEL = 'scoreboard.Team'
+# User registration
+REGISTRATION_OPEN = True
+ACCOUNT_ACTIVATION_DAYS = 5
+REGISTRATION_AUTO_LOGIN = True
+LOGIN_URL = '/accounts/login/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/'

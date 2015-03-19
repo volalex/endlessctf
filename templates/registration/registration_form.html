@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+{%  load bootstrap3 %}
+{% block title %}Регистрация{% endblock %}
+
+{% block main_content %}
+    <h2>Регистрация</h2>
+    <div class="terminal1 signin_form">
+        <form method="post" action="." class="form-horizontal">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {%  buttons %}
+                <button type="submit" class="btn btn-primary">Регистрация</button>
+            {% endbuttons %}
+        </form>
+    </div>
+{% endblock %}

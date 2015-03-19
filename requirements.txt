@@ -1,2 +1,2 @@
-Django=1.8b1
+Django=1.7.7
 django-summernote
